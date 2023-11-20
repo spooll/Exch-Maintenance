@@ -53,6 +53,7 @@ function global:Exch-Maintenance {
         {
             foreach ($mb in (Get-MailboxDatabaseCopyStatus | Where-Object status -eq "mounted")) 
             {
+                #Move-ActiveMailboxDatabase -Server $env:COMPUTERNAME -Confirm:$false
                 Move-ActiveMailboxDatabase -SkipAllChecks -Identity $mb.DatabaseName -ActivateOnServer (get-exchangeserver |Where-Object Name -ne $env:COMPUTERNAME| Get-Random| Select-Object -ExpandProperty Name) -Confirm:$false #-ErrorAction silentlycontinue
             }
         }
