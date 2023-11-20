@@ -4,7 +4,7 @@
 .DESCRIPTION
     You don`t need edit this script, but use it in local Exchange Server session.
     Its total 70-lines function script instead of 3 572-lines scripts by MS (with skipped Signature lines): 
-    StartDagServerMaintenance, StopDagServerMaintenance, RedistributeActiveDatabases, 
+    StartDagServerMaintenance.ps1, StopDagServerMaintenance.ps1, RedistributeActiveDatabases.ps1, 
     which are difficult and lazy to parse (has anyone figured out what's inside?).
 
     For your convenience, it is recommended to write the function in the profile file,
