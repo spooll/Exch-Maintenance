@@ -34,9 +34,9 @@
 function global:Exch-Maintenance {
 
     param(
-        [Parameter(ParameterSetName="Start")]
+        #[Parameter(ParameterSetName="Start")]
         [switch]$Start,
-        [Parameter(ParameterSetName="Stop")]
+        #[Parameter(ParameterSetName="Stop")]
         [switch]$Stop
     )
 
