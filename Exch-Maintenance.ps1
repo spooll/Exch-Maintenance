@@ -41,7 +41,7 @@ function global:Exch-Maintenance {
     )
 
     $WarningActionPreference = "SilentlyContinue"
-    if ($Start -eq $true)
+    if ($Start)
     {
         Set-ServerComponentState $env:COMPUTERNAME -Component HubTransport -State Draining -Requester Maintenance
         Set-ServerComponentState $env:COMPUTERNAME -Component ServerWideOffline -State InActive -Requester Maintenance
@@ -73,7 +73,7 @@ function global:Exch-Maintenance {
         }
     }
     
-    if ($Stop -eq $true)
+    if ($Stop)
     {
         Write-Host "Prepearing to activate server components" -Foreground GREEN
         Set-ServerComponentState $env:COMPUTERNAME -Component ServerWideOffline -State Active -Requester Maintenance
