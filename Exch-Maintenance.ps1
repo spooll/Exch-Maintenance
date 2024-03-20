@@ -39,7 +39,7 @@ function global:Exch-Maintenance {
 
     $WarningActionPreference = "SilentlyContinue"
     while (-Not(Get-PSSession|Where-Object ConfigurationName -eq "Microsoft.Exchange")) {
-        $exch= (Get-ADComputer -Filter "name -like 's-exch-0*'").name| Get-Random             #Put your Exchange server names tamplate here
+        $exch= (Get-ADComputer -Filter "name -like 's-exch-0*'").name| Get-Random                                            #Put your Exchange server names template here!!!
         $session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri "http://$exch/Powershell" -Authentication Kerberos
         Import-PSSession $session -DisableNameChecking -AllowClobber | out-null
         Write-Host Exchange PSSession loaded successfully! -ForegroundColor magenta
@@ -94,8 +94,7 @@ function global:Exch-Maintenance {
                     $Queue| Select-Object Name, ReplayQueueLength
                     Start-Sleep 10
                 }
-            foreach ($mbx in $Missed.DatabaseName)
-            {
+            foreach ($mbx in $Missed.DatabaseName){
                 Move-ActiveMailboxDatabase -SkipAllChecks -Identity $mbx -ActivateOnServer $env:COMPUTERNAME -Confirm:$false
             }
         }
