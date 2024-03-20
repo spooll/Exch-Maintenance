@@ -24,10 +24,10 @@ function global:Exch-Maintenance {
 
     Name                  Status MailboxServer ActivationPreference
     ----                  ------ ------------- --------------------
-    HeavyDB01\S-EX-01    Mounted S-EX-01                          1
-    LightDB01\S-EX-02    Mounted S-EX-02                          1
-    LightDB02\S-EX-03    Mounted S-EX-03                          1
-    HeavyDB02\S-EX-04    Mounted S-EX-04                          1
+    HeavyDB01\S-EX-01    Mounted S-EXCH-01                          1
+    LightDB01\S-EX-02    Mounted S-EXCH-02                          1
+    LightDB02\S-EX-03    Mounted S-EXCH-03                          1
+    HeavyDB02\S-EX-04    Mounted S-EXCH-04                          1
 .EXAMPLE
     Exch-Maintenance -Start
     Exch-Maintenance -Stop
