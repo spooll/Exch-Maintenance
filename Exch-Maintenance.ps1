@@ -39,7 +39,7 @@ function global:Exch-Maintenance {
 
     $WarningActionPreference = "SilentlyContinue"
     while (-Not(Get-PSSession|Where-Object ConfigurationName -eq "Microsoft.Exchange")) {
-        $exch= (Get-ADComputer -Filter "name -like 's-ex-0*'").name| Get-Random
+        $exch= (Get-ADComputer -Filter "name -like 's-exch-0*'").name| Get-Random             #Put your Exchange server names tamplate here
         $session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri "http://$exch/Powershell" -Authentication Kerberos
         Import-PSSession $session -DisableNameChecking -AllowClobber | out-null
         Write-Host Exchange PSSession loaded successfully! -ForegroundColor magenta
