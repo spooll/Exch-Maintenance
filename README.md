@@ -11,6 +11,8 @@
     Start Exchange Management Shell, type "Notepad $profile", and if you have warning
     "The system cannot find..." , you should create it first, by running "New-item $profile -Force",
     then copy-paste script text, and reopen EMS.
+### PARAMETER Exch
+    Your Exchange Server to Maintain.
 ### PARAMETER Start
     It`s set HubTransport, ServerWideOffline, DatabaseCopyActivationDisabledAndMoveNow, DatabaseCopyAutoActivationPolicy
     and ClusterNode in Maintenance, redirect current messages in queue to random Exch server and Move-ActiveMailboxDatabase
@@ -28,5 +30,5 @@
     HeavyDB02\S-EX-04    Mounted S-EXCH-04                          1
 ### EXAMPLE
 ```powershell
-    Exch-Maintenance -Start
-    Exch-Maintenance -Stop
+    Exch-Maintenance -Exch s-ex-01 -Start
+    Exch-Maintenance -Exch s-ex-01 -Stop
