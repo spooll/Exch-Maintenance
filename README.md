@@ -2,7 +2,7 @@
     Function to start and stop Exchange Server Maintenance.
 ### DESCRIPTION
     You don`t need edit this script, but use it in local Exchange Server session.
-    Its total 70-lines function script instead of 3 572-lines scripts by MS (with skipped Sig.): 
+    Its total 69-lines function script instead of 3 572-lines scripts by MS (with skipped Sig.): 
     StartDagServerMaintenance, StopDagServerMaintenance, RedistributeActiveDatabases, 
     which are difficult and lazy to parse (has anyone figured out what's inside?).
 
