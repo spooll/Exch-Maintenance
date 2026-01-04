@@ -2,7 +2,7 @@ function global:Exch-Maintenance {
     param(
         [Parameter(ParameterSetName='START',Mandatory=$true)][switch]$Start,
         [Parameter(ParameterSetName='STOP',Mandatory=$true)][switch]$Stop,
-        [Parameter(Mandatory)][ValidateSet("s-ex-01","s-ex-02","s-ex-03","s-ex-04","s-ex-05")]$Exch
+        [Parameter(Mandatory)]$Exch
     )
 
     $WarningActionPreference = "SilentlyContinue"
@@ -67,3 +67,4 @@ function global:Exch-Maintenance {
         Get-MailboxDatabaseCopyStatus -Active | Format-Table Name, Status, MailboxServer,ActiveDatabaseCopy, ActivationPreference
     }
 }
+
