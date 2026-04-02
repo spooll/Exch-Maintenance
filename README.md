@@ -1,7 +1,7 @@
 ## SYNOPSIS
-    Function to start and stop Exchange Server Maintenance localy!
+    Function to start and stop Exchange Server Maintenance!
 ### DESCRIPTION
-    You don`t need edit this script, but use it in local Exchange Server session.
+    You don`t need edit this script, but use it in Exchange Server session (Import-PSSession).
     Its total 69-lines function script instead of 3 572-lines scripts by MS (with skipped Sig.): 
     StartDagServerMaintenance, StopDagServerMaintenance, RedistributeActiveDatabases, 
     which are difficult and lazy to parse (has anyone figured out what's inside?).
@@ -10,7 +10,7 @@
     which located in C:\Users\YourName\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
     Start Exchange Management Shell, type "Notepad $profile", and if you have warning
     "The system cannot find..." , you should create it first, by running "New-item $profile -Force",
-    then copy-paste script text, and reopen EMS.
+    then copy-paste script text, and reopen Powershell.
 ### PARAMETER Exch
     Your Exchange Server to Maintain.
 ### PARAMETER Start
