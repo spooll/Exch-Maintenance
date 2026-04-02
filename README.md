@@ -1,5 +1,5 @@
 ## SYNOPSIS
-    Function to start and stop Exchange Server Maintenance.
+    Function to start and stop Exchange Server Maintenance localy!
 ### DESCRIPTION
     You don`t need edit this script, but use it in local Exchange Server session.
     Its total 69-lines function script instead of 3 572-lines scripts by MS (with skipped Sig.): 
